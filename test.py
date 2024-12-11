@@ -1,12 +1,15 @@
 import subprocess
 
 # Boilerplate function - include this in every test below!
+
+
 def prepare_and_assert(input_array, output_array):
     # Prepare Variables
     expected_output = '\n'.join(output_array)
 
-    # Get Actual Output 
-    output_data = subprocess.run(['node', 'index.js'] + input_array, stdout=subprocess.PIPE)
+    # Get Actual Output
+    output_data = subprocess.run(
+        ['node', 'index.js'] + input_array, stdout=subprocess.PIPE)
     output_bytes = output_data.stdout.strip()
     output_string = output_bytes.decode("utf-8")
 
@@ -14,6 +17,8 @@ def prepare_and_assert(input_array, output_array):
     assert expected_output in output_string
 
 # Test 1
+
+
 def test_task_one():
     # Inputs
     input_array = [
@@ -29,6 +34,8 @@ def test_task_one():
     prepare_and_assert(input_array, output_array)
 
 # Test 2
+
+
 def test_task_two():
     # Inputs
     input_array = [
@@ -46,6 +53,8 @@ def test_task_two():
     prepare_and_assert(input_array, output_array)
 
 # Test 3
+
+
 def test_task_three():
     # Inputs
     input_array = [
@@ -63,6 +72,8 @@ def test_task_three():
     prepare_and_assert(input_array, output_array)
 
 # Test 4
+
+
 def test_task_four():
     # Inputs
     input_array = [
@@ -81,6 +92,8 @@ def test_task_four():
     prepare_and_assert(input_array, output_array)
 
 # Test 5
+
+
 def test_task_five_pass():
     # Inputs
     input_array = [
@@ -96,6 +109,8 @@ def test_task_five_pass():
     prepare_and_assert(input_array, output_array)
 
 # Test 6
+
+
 def test_task_five_fail():
     # Inputs
     input_array = [
@@ -111,6 +126,8 @@ def test_task_five_fail():
     prepare_and_assert(input_array, output_array)
 
 # Test 7
+
+
 def test_task_six_excellent():
     # Inputs
     input_array = [
@@ -126,6 +143,8 @@ def test_task_six_excellent():
     prepare_and_assert(input_array, output_array)
 
 # Test 8
+
+
 def test_task_six_not_excellent():
     # Inputs
     input_array = [
@@ -141,6 +160,8 @@ def test_task_six_not_excellent():
     prepare_and_assert(input_array, output_array)
 
 # Test 9
+
+
 def test_task_seven_perfect():
     # Inputs
     input_array = [
@@ -156,6 +177,8 @@ def test_task_seven_perfect():
     prepare_and_assert(input_array, output_array)
 
 # Test 10
+
+
 def test_task_seven_not_perfect():
     # Inputs
     input_array = [
